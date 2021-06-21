@@ -1,0 +1,22 @@
+<div class="home-page-container">
+    <h1>Welcome!</h1>
+    <p class="welcome-text">
+      This is the boyfriend market app. <br>
+      Please make the following selection and follow each step.
+    </p>
+    <div class="gender-choice">
+      <h2>Select Gender</h2>
+      <div class="gender-btn-container">
+        <button mat-raised-button style="background-color: rgb(38, 49, 146);" [routerLink]="['/options']">Male</button>
+        &nbsp;
+        <button mat-raised-button color="primary" (click)="selectedFemale = true">Female</button>
+      </div>
+    </div>
+    <div *ngIf="selectedFemale" class="female-err-msg">
+      <p>
+        It looks like you choose Female! If this is by mistake no worries,
+        however, if you do indeed want a female boyfriend you'll need to make your
+        own web-app that caters to your needs.
+      </p>
+    </div>
+  </div>
